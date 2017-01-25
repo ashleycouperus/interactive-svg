@@ -12,11 +12,20 @@ html {
   text-size-adjust: 100%;
 }
 
-#left-eye, #right-eye {
-  animation: translate 2s linear infinite alternate;
+#left-ear, #right-ear {
+  transform: translateY(0%);
+  transition: transform 1s ease-out;
 }
 
-@keyframes translate {
+.bear:hover #left-ear, .bear:hover #right-ear {
+  transform: translateY(-10px);
+}
+
+#left-eye, #right-eye {
+  animation: move 2s linear infinite alternate;
+}
+
+@keyframes move {
 
   0% {
     transform: translateX(0%);
